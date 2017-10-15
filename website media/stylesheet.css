@@ -28,7 +28,7 @@ body{
 }
 
 #banner {
-	width = 70%;
+	width: 70%;
 }
 
 
@@ -77,7 +77,7 @@ body{
     height: 100%;
 	max-height: 200px;
 	width: 100%;
-	max-width: 480px;
+	max-width: 550px;
 }
 
 .bodyImg {
@@ -94,7 +94,17 @@ body{
     background-color: #6f846c; /* Green */
     text-align: center;
 	color: #fcfcfc;
-	width: 25%;
+	width: 33%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.headingDropdown {
+	display: none;
+	background-color: #6f846c; /* Green */
+    text-align: center;
+	color: #fcfcfc;
+
 }
 
 @media (max-width:700px) {
@@ -126,5 +136,42 @@ body{
 	#introPara {
 		width: 100%;
 		padding-left: 0px;
-	}	
+	}
+	
+	.headingButton {
+		width: 16.5%;
+	}
+}
+
+@media (max-width:350px) {
+	#heading {
+		height: 80px;
+		flex-wrap: nowrap;
+	}
+	
+	#banner {
+		height: 100%;
+		width: 70%;
+	}
+	
+	#buttons {
+		width: 30%;
+	}
+	
+	.headingButton {
+		display: none;
+	}
+	
+	.headingDropdown {
+		display: inline-block;
+		width: 100%
+	}
+	
+	p{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.8em;
+		line-height: 1.2em;
+		max-width: 30em;
+		margin: auto;
+	}
 }
