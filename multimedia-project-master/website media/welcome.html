@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vegan Nutrition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts.js"></script>
+</head>
+<body>
+<div id="heading">
+	<div id="banner">
+		<a href="welcome.html"><img src="banner.jpg" alt="Vegan Nutrition Banner" class="bannerImg"></a>
+	</div>
+	<div id="buttons">
+		<a href="getstarted.html" class="headingButton">Get Started</a>
+		<a href="getstarted.html" class="headingButton">Learn about Protein</a>
+		<a href="getstarted.html" class="headingButton">Learn about Fat</a>
+		<a href="getstarted.html" class="headingButton">Learn about Carbs</a>
+		<a href="getstarted.html" class="headingButton">Learn about Vitamins</a>
+		<a href="getstarted.html" class="headingButton">Learn about Fibre</a>
+		<a href="getstarted.html" class="headingButton">Recipes</a>
+		<a href="getstarted.html" class="headingButton">About Us!</a>
+		
+		<div class="headingDropdown">
+		  <img src="menu.png" onclick="menuClick()" class="menuIcon">
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="getstarted.html">Get Started</a>
+			<a href="#">Learn about Protein</a>			
+			<a href="#">Learn about Fat</a>
+			<a href="#">Learn about Carbohydrate</a>			
+			<a href="#">Learn about Fibre</a>
+			<a href="#">Learn about Vitamins</a>
+			<a href="#">Recipes</a>
+			<a href="#">About Us!</a>
+		  </div>
+		</div>
+	</div>
+
+</div>
+<div id="body">
+	<br>
+	<p><b>Hello, and welcome to Vegan Nutrition!</b><br> If you are new to veganism, congratulations! For information and advice on how to get started, simply click below:</p>
+	<br>
+	<div id="slideshow">
+		<a href="getstarted.html"><img class="mySlides" src="slideshow/depp.jpg"></a>
+		<a href="getstarted.html"><img class="mySlides" src="slideshow/ellen.jpg"></a>
+		<a href="getstarted.html"><img class="mySlides" src="slideshow/davinci.jpg"></a>
+		<a href="getstarted.html"><img class="mySlides" src="slideshow/natalie.jpg"></a>
+	</div>
+	<br>
+	<p>Otherwise, if you want to skip straight to the recipes, we have some fantastic ones here:</p>
+	<br>
+	<div id="intro">
+		<div class="introImg">
+			<a href="aboutUs.html"><img src="recipes/stirfry.jpg" alt="Vegetable and Tofu Stir-fry" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Vegetable and Tofu Stirfry: </b><br> With lightly stirfried brocolli, carrot, mushroom, onion and tofu in a spicy thai sauce, you will love the taste and feel great after eating.</p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="aboutUs.html"><img src="recipes/wrap.jpg" alt="Falafel and Salad Wrap" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Falafel and Salad wrap: </b><br> My personal favourite, taking only a few minutes to prepare and tasting delicious, the fun is in picking your favourite fillings - I suggest iceberg lettuce, fresh tomato, alfalfa sprouts, cucumber, jalepeno peppers and a bit of lemon juice to go with the fried Falafel.</p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="aboutUs.html"><img src="recipes/penne.jpg" alt="Penne Pasta" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Penne with Nutmeat and homemade pasta sauce: </b><br> Great for making in bulk and eating throughout the week or bringing to class or work, the onion, garlic and tomato pasta sauce brings a delicious flavour to the high fibre penne and the high protein nutmeat. Even better seasoned with additional spice to taste. </p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="aboutUs.html"><img src="recipes/nachos.jpg" alt="Nachos" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Easy Nachos: </b><br> This is my recipe of choice when I don't feel like cooking. Ready in under five minutes, I can bring the ingredients to work and cook and eat it on a lunchbreak. If you select healthy cornchips it's healthy and nutritious too!</p>
+		</div>
+	</div>
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (let slide of slides) {
+      slide.style.display = "none"; 
+    }
+    slideIndex = Math.floor(Math.random() * slides.length + 1);
+
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 9001);
+}
+</script>
+</body>
+</html>
