@@ -1,15 +1,35 @@
-p{
+form {
+	margin: auto;
+	text-align: left;
+}
+
+h1 {
+	margin: auto;
+	text-align: center;
+}
+
+p {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5em;
 	max-width: 30em;
 	margin: auto;
+	text-align: left;
+	color: #3c3c3c;
 }
 
-body{
+body {
 	display: -webkit-flex; /* Safari */
     -webkit-flex-direction: column; /* Safari 6.1+ */
     display: flex;
     flex-direction: column;
+	background-color: #fcfcfc;
+}
+
+video {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	padding-top: 10px;
 }
 
 #heading {
@@ -27,10 +47,30 @@ body{
 	border-color: #99675d;
 }
 
+#nextStep{
+	display: none;
+}
+
 #banner {
 	width: 70%;
 }
 
+#slideshow {
+	width: 80%;
+	padding-bottom: 55%;
+	position: relative;
+	margin: auto;
+}
+
+.mySlides {
+	position: absolute;
+    top: 0;  bottom: 0;  left: 0;  right: 0;
+	border-color: #99675d;
+	border-style: outset;
+	height: 100%;
+	width: 100%;
+
+}
 
 #buttons {
 	display: -webkit-flex; /* Safari */
@@ -60,15 +100,46 @@ body{
 
 }
 
-#introImg {
-	width: 45%;
-	padding-right: 5px;
+.ingredient {
+	width: 33%;
+	height: auto;
+	max-width: 1000px;
+	margin: auto;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: row;
+	padding-top: 10px;
+}
+
+.recipe {
+	width: 100%;
+	height: auto;
+	max-width: 1000px;
+	margin: auto;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: row;
+	padding-top: 10px;
+	flex-wrap: wrap;
+}
+
+#calculator {
+	margin: auto;
+	width: 75%;
+	border-style: outset;
+}
+
+.introImg {
+	width: 35%;
+	padding-right: 0px;
 	margin: auto;
 }
 
-#introPara {
+.introPara {
 	width: 55%;
-	padding-left: 5px;
+	padding-left: 0px;
 	margin: auto;
 }	
 
@@ -77,7 +148,7 @@ body{
     height: 100%;
 	max-height: 200px;
 	width: 100%;
-	max-width: 550px;
+	max-width: 650px;
 }
 
 .bodyImg {
@@ -91,10 +162,13 @@ body{
 
 
 .headingButton {
-    background-color: #6f846c; /* Green */
+    background-color: #6f846c;
     text-align: center;
 	color: #fcfcfc;
-	width: 33%;
+	text-decoration: none;
+	width: 23%;
+	padding-top: 15px;
+	border: outset;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -110,8 +184,8 @@ body{
 @media (max-width:700px) {
 	#heading {
 		flex-wrap: wrap;
-		height: 200px;
-		max-width: 450px;
+		height: 250px;
+		max-width: 650px;
 	}
 	
 	#buttons {
@@ -127,23 +201,24 @@ body{
 		flex-wrap: wrap;
 	}
 	
-	#introImg {
+	.introImg {
 		width: 100%;
 		margin: auto;
 		padding-right: 0px;
 	}
 
-	#introPara {
+	.introPara {
 		width: 100%;
 		padding-left: 0px;
 	}
 	
 	.headingButton {
-		width: 16.5%;
+		width: 10.5%;
+		padding: 0px;
 	}
 }
 
-@media (max-width:350px) {
+@media (max-width:450px) {
 	#heading {
 		height: 80px;
 		flex-wrap: nowrap;
@@ -151,11 +226,11 @@ body{
 	
 	#banner {
 		height: 100%;
-		width: 85%;
+		width: 80%;
 	}
 	
 	#buttons {
-		width: 15%;
+		width: 20%;
 	}
 	
 	.headingButton {
@@ -164,7 +239,9 @@ body{
 	
 	.headingDropdown {
 		display: inline-block;
-		width: 100%;
+		width: 80%;
+		height: 80%;
+		margin: auto;
 	}
 	
 	p{

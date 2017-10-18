@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vegan Nutrition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts.js"></script>
+</head>
+<body>
+<div id="heading">
+	<div id="banner">
+		<a href="welcome.html"><img src="banner.jpg" alt="Vegan Nutrition Banner" class="bannerImg"></a>
+	</div>
+	<div id="buttons">
+		<a href="getstarted.html" class="headingButton">Get Started</a>
+		<a href="protein.html" class="headingButton">Learn about Protein</a>
+		<a href="getstarted.html" class="headingButton">Learn about Fat</a>
+		<a href="getstarted.html" class="headingButton">Learn about Carbs</a>
+		<a href="getstarted.html" class="headingButton">Learn about Vitamins</a>
+		<a href="getstarted.html" class="headingButton">Learn about Fibre</a>
+		<a href="recipe.html" class="headingButton">Recipes</a>
+		<a href="getstarted.html" class="headingButton">About Us!</a>
+		
+		<div class="headingDropdown">
+		  <img src="menu.png" onclick="menuClick()" class="menuIcon">
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="getstarted.html">Get Started</a>
+			<a href="#">Learn about Protein</a>			
+			<a href="#">Learn about Fat</a>
+			<a href="#">Learn about Carbohydrate</a>			
+			<a href="#">Learn about Fibre</a>
+			<a href="#">Learn about Vitamins</a>
+			<a href="#">Recipes</a>
+			<a href="#">About Us!</a>
+		  </div>
+		</div>
+	</div>
+
+</div>
+<div id="body">
+	<div id="intro">
+		<div class="introImg">
+			<a href="aboutUs.html"><img src="recipes/stirfry.jpg" alt="Vegetable and Tofu Stir-fry" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Vegetable and Tofu Stirfry: </b><br> With lightly stirfried brocoli, carrot, mushroom, onion and tofu in a spicy thai sauce, you will love the taste and feel great after eating.</p>
+		</div>
+	</div>
+	
+	<video width="320" height="240" controls>
+		<source src="video/samplevideo.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<h1>Ingredients</h1>
+	<div class="recipe">
+		<div class="ingredient">
+			<div class="introImg">
+				<img src="recipes/brocoli.jpeg" alt="Broccoli" class="bodyImg">
+			</div>
+			<div class="introPara">
+				<p><b>Broccoli: </b><br> 1 head of broccoli, roughly chopped</p>
+			</div>
+		</div>
+		<div class="ingredient">
+			<div class="introImg">
+				<img src="recipes/tofu.jpg" alt="Tofu" class="bodyImg">
+			</div>
+			<div class="introPara">
+				<p><b>Tofu: </b><br> 300g of Firm Tofu, we recommend Bean Supreme available from most supermarkets. Ensure the tofu is as firm as possible, as soft tofu will have an undesirable texture</p>
+			</div>
+		</div>
+		<div class="ingredient">
+			<div class="introImg">
+				<img src="recipes/brocoli.jpeg" alt="Broccoli" class="bodyImg">
+			</div>
+			<div class="introPara">
+				<p><b>Broccoli: </b><br> 1 head of broccoli, roughly chopped</p>
+			</div>
+		</div>
+		<div class="ingredient">
+			<div class="introImg">
+				<img src="recipes/tofu.jpg" alt="Tofu" class="bodyImg">
+			</div>
+			<div class="introPara">
+				<p><b>Tofu: </b><br> 300g of Firm Tofu, we recommend Bean Supreme available from most supermarkets. Ensure the tofu is as firm as possible, as soft tofu will have an undesirable texture</p>
+			</div>
+		</div>
+		<div class="ingredient">
+			<div class="introImg">
+				<img src="recipes/tofu.jpg" alt="Tofu" class="bodyImg">
+			</div>
+			<div class="introPara">
+				<p><b>Tofu: </b><br> 300g of Firm Tofu, we recommend Bean Supreme available from most supermarkets. Ensure the tofu is as firm as possible, as soft tofu will have an undesirable texture</p>
+			</div>
+		</div>
+	</div>
+	<h1>Recipe</h1>
+	<p>Yet to come. Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...Blah blah lorem ipsum so you can see where it goes to...</p>
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (let slide of slides) {
+      slide.style.display = "none"; 
+    }
+    slideIndex = Math.floor(Math.random() * slides.length + 1);
+
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 9001);
+}
+</script>
+</body>
+</html>
