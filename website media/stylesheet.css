@@ -103,9 +103,9 @@ video {
 }
 
 .ingredient {
-	width: 33%;
+	width: 100%;
 	height: auto;
-	max-width: 1000px;
+	max-width: 30em;
 	margin: auto;
 	display: -webkit-flex; /* Safari */
     -webkit-flex-direction: row; /* Safari 6.1+ */
@@ -168,6 +168,7 @@ video {
     text-align: center;
 	color: #fcfcfc;
 	text-decoration: none;
+	font-weight: bold;
 	width: 23%;
 	padding-top: 15px;
 	border: outset;
