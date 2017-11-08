@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vegan Nutrition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts.js"></script>
+</head>
+<body>
+<script src="header.js"></script>
+
+</div>
+<div id="body">
+	<br>
+	<h1>Recipes</h1>
+	<div id="intro">
+		<div class="introImg">
+			<a href="recipe1.html"><img src="media/images/ingredients/stirfry.jpg" alt="Vegetable and Tofu Stir-fry" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Vegetable and Tofu Stirfry: </b><br> With lightly stirfried broccoli, carrot, mushroom, onion and tofu in a spicy thai sauce, you will love the taste and feel great after eating.</p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="recipe2.html"><img src="media/images/ingredients/wrap.jpg" alt="Falafel and Salad Wrap" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Falafel and Salad wrap: </b><br> My personal favourite, taking only a few minutes to prepare and tasting delicious, the fun is in picking your favourite fillings - I suggest iceberg lettuce, fresh tomato, alfalfa sprouts, cucumber, jalepeno peppers and a bit of lemon juice to go with the fried Falafel.</p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="recipe3.html"><img src="media/images/ingredients/penne.jpg" alt="Penne Pasta" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Penne with Nutmeat and homemade pasta sauce: </b><br> Great for making in bulk and eating throughout the week or bringing to class or work, the onion, garlic and tomato pasta sauce brings a delicious flavour to the high fibre penne and the high protein nutmeat. Even better seasoned with additional spice to taste. </p>
+		</div>
+	</div>
+	<div id="intro">
+		<div class="introImg">
+			<a href="recipe4.html"><img src="media/images/ingredients/nachos.jpg" alt="Nachos" class="bodyImg"></a>
+		</div>
+		<div class="introPara">
+			<p><b>Easy Nachos: </b><br> This is my recipe of choice when I don't feel like cooking. Ready in under five minutes, I can bring the ingredients to work and cook and eat it on a lunchbreak. If you select healthy cornchips it's healthy and nutritious too!</p>
+		</div>
+	</div>
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (let slide of slides) {
+      slide.style.display = "none"; 
+    }
+    slideIndex = Math.floor(Math.random() * slides.length + 1);
+
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 9001);
+}
+</script>
+</body>
+</html>

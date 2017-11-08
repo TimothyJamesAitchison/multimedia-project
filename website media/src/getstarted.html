@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vegan Nutrition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts.js"></script>
+<script src="header.js"></script>
+
+</head>
+<body>
+
+<div id="body">
+	<br>
+	<p><b>Congratulations on taking the first step!</b> In order to get started we first need to determine how much of each thing you will need. Put a few quick details into the calculator and hit go to see how much you will need, then we can go to the next step of how to get them in your diet.</p>
+	<br>
+	<div id="calculator">
+	<form id="calcForm">
+		Please enter your approximate body weight in Kg: <input type="number" value="70" name="weight"> Kg
+		<br><br>
+		Please enter your age: <input type="number" value="29" name="age"> years
+		<br><br>
+		Please choose which sex best matches your body's physiology
+		<input type="radio" name="gender" value="male" checked> Male
+		<input type="radio" name="gender" value="female"> Female
+		<br><br>
+		<input type="button" onclick="calculate()" value="Submit">
+	</form>
+	</div>
+	<br>
+	<p><b> You should eat this much each day: </b></p>
+	<p id="protein">Protein: ???</p>
+	<p id="carbs">Carbohydrate: ???</p>
+	<p id="fat">Fat: ???</p>
+	<p id="fibre">Fibre: ???</p>
+	<p id="iron">Iron: ???</p>
+	<p id="b12">Vitamin B12: ???</p>
+	<p id="omega3">Omega-3: ???</p>
+	<br>
+	
+	<a href="protein.html"><img src="media/images/runner.jpg" alt="Take the next step" class="bodyImg" id="nextStep"></a>
+
+
+	
+	
+</div>
+<script>
+function calculate(){
+	let gender = "male";
+	let form = document.getElementById("calcForm");
+	let weight = form.elements[0].value;
+	let age = form.elements[1].value;	
+	if(form.elements[2].checked){
+		gender = "male";
+	}else{
+		gender = "female";
+	}
+	let protein;
+	let carbs;
+	let fat;
+	let fibre;
+	let iron;
+	let vitamin;
+	let omega = "500 mg";
+	let calories;
+	
+	if(gender == "female" && age < 50 && age > 19){
+		iron = "18mg";
+	}else{
+		iron = "8mg";
+	}
+	
+	protein = Math.floor(0.8 * weight);
+	
+	if(gender == "male"){
+		fibre = 34;
+	}else{
+		if(age < 50){
+			fibre = 25;
+		}else{
+			fibre = 21;
+		}
+	}
+	
+	if(gender = "male"){
+		vitamin = 2.4;
+	}else{
+		vitamin = 2.8;
+	}
+	
+	if(gender == "male"){
+		calories = 2500;
+	}else{
+		calories = 2000;
+	}
+	
+	fat = Math.floor(.25 * calories / 9);
+	
+	let caloriesFromFat = fat * 9;
+	let caloriesFromProtein = protein * 4;
+	let caloriesFromCarbs = calories - caloriesFromFat - caloriesFromProtein;
+	console.log(caloriesFromFat);
+	console.log(caloriesFromProtein);
+	console.log(caloriesFromCarbs);
+	carbs = Math.floor((calories - protein * 4 - fat * 9) / 4);
+	
+	document.getElementById("protein").innerHTML = "Protein: " + protein + "g";
+	document.getElementById("carbs").innerHTML = "Carbohydrate: " + carbs + "g";
+	document.getElementById("fat").innerHTML = "Fat: " + fat + "g";
+	document.getElementById("fibre").innerHTML = "Fibre: " + fibre + "g";
+	document.getElementById("iron").innerHTML = "Iron: " + iron;
+	document.getElementById("b12").innerHTML = "Vitamin B12: " + vitamin + " micrograms";
+	document.getElementById("omega3").innerHTML = "Omega-3: " + omega;
+	document.getElementById("nextStep").style.display = "block";
+}
+</script>
+</body>
+</html>
